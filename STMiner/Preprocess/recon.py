@@ -67,7 +67,6 @@ class INRModel(nn.Module):
             self.INR.parameters(), lr=self.learning_rate_, weight_decay=self.reg_par_
         )
 
-
         dataset = TensorDataset(self.coords, self.X)
         self.dataloader = DataLoader(dataset, batch_size=self.batch_size, shuffle=False)
 
@@ -78,16 +77,16 @@ class INRModel(nn.Module):
 
         for epoch in range(self.epoch_num):
             epoch_loss = 0
-            epoch_recon = []  #
+            epoch_recon = []
 
             for batch_coords, batch_X in self.dataloader:
                 batch_coords = batch_coords.to(self.device)
                 batch_X = batch_X.to(self.device)
 
-                INR_recon = self.INR(batch_coords)  #
+                INR_recon = self.INR(batch_coords)
                 self.optimizer_.zero_grad()
 
-                loss = torch.norm((INR_recon - batch_X), p=2)  #
+                loss = torch.norm((INR_recon - batch_X), p=2)
                 loss = torch.sum(loss)
                 epoch_loss += loss.item()
 
@@ -98,7 +97,6 @@ class INRModel(nn.Module):
 
             scheduler.step()
 
-            # 🔥 只保留最后一个 epoch 的完整重构
             epoch_recon = torch.cat(epoch_recon, dim=0)
             avg_epoch_loss = epoch_loss / len(self.dataloader)
 
