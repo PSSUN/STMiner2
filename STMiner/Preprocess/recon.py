@@ -47,7 +47,7 @@ class INRModel(nn.Module):
             learning_rate=1e-4,
             reg_par=1e-4,
             epoch_num=100,
-            batch_size=128,  #
+            batch_size=128,
             print_train_log_info=True,
     ):
         super().__init__()
