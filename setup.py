@@ -6,7 +6,7 @@ with open(path.join(this_directory, 'README.md'), encoding='utf-8') as f:
     long_description = f.read()
 
 setup(
-    name='STMiner',
+    name='STMiner2',
     version='1.0.9',
     author='Peisen Sun',
     url='https://github.com/xjtu-omics/STMiner',
@@ -17,7 +17,7 @@ setup(
     author_email='sunpeisen@stu.xjtu.edu.cn',
     packages=find_packages(),
     platforms=['Linux', 'Mac', 'Windows'],
-    keywords=['STMiner',
+    keywords=['STMiner2',
                       'bioinformatics',
                       'GMM',
                       'Hellinger distance',
