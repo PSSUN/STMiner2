@@ -1,8 +1,7 @@
+import numpy as np
 import torch
 import torch.nn as nn
 import torch.optim as optim
-import numpy as np
-
 from scipy.sparse import csr_matrix
 from torch.utils.data import DataLoader, TensorDataset
 

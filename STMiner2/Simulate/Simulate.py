@@ -2,10 +2,9 @@ from random import choice
 from typing import List
 
 import pandas as pd
+from STMiner.Simulate.simUtils import *
 from anndata import AnnData
 from scipy.sparse import csr_matrix
-
-from STMiner.Simulate.simUtils import *
 
 
 class Simulator:

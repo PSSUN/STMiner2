@@ -1,13 +1,12 @@
 import matplotlib.pyplot as plt
 import scanpy as sc
 import seaborn as sns
-from scipy import sparse
-from sklearn import mixture
-from tqdm import tqdm
-
 from STMiner.Algorithm.distribution import array_to_list
 from STMiner.SPFinder import SPFinder
 from STMiner.test.testUtils import *
+from scipy import sparse
+from sklearn import mixture
+from tqdm import tqdm
 
 
 class SPFinderTester(SPFinder):

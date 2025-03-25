@@ -7,11 +7,10 @@ import numpy as np
 import scanpy as sc
 import seaborn as sns
 from PIL import Image
+from STMiner.Algorithm.AlgUtils import get_exp_array
 from numba import njit
 from sklearn import mixture
 from tqdm import tqdm
-
-from STMiner.Algorithm.AlgUtils import get_exp_array
 
 # Ignore the unnecessary warnings
 warnings.filterwarnings("ignore")

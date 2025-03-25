@@ -3,9 +3,6 @@ from collections import Counter
 from typing import Optional
 
 import scanpy as sc
-from anndata import AnnData
-from scipy.stats import zscore
-from sklearn import mixture
 from STMiner.Algorithm.algorithm import cluster
 from STMiner.Algorithm.distance import *
 from STMiner.Algorithm.distance import compare_gmm_distance
@@ -16,6 +13,9 @@ from STMiner.IO.read_bmk import read_bmk
 from STMiner.IO.read_h5ad import read_h5ad
 from STMiner.IO.read_stereo import read_gem_file
 from STMiner.Plot import Plot
+from anndata import AnnData
+from scipy.stats import zscore
+from sklearn import mixture
 
 
 def scale_array(exp_matrix, total_count):
