@@ -2,7 +2,6 @@ import multiprocessing
 from collections import Counter
 from typing import Optional
 
-import numpy as np
 import scanpy as sc
 from anndata import AnnData
 from scipy.stats import zscore
